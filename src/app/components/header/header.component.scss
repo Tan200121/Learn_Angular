@@ -1,3 +1,58 @@
-.abc {
-    font-size: 20px !important;
-}
+nav {
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+  
+      .menu-item {
+        position: relative;
+  
+        a {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          text-decoration: none;
+          padding: 8px 12px;
+          color: #333;
+          background-color: #f9f9f9;
+          cursor: pointer;
+  
+          &:hover {
+            background-color: #ddd;
+          }
+  
+          .arrow {
+            margin-left: 8px;
+            font-size: 12px;
+            transition: transform 0.3s ease;
+          }
+        }
+  
+        /* Submenu cấp 2 và cấp 3 */
+        .submenu {
+          display: block;
+          position: absolute;
+          top: 100%;
+          left: 0;
+          background-color: #fff;
+          border: 1px solid #ddd;
+          min-width: 200px;
+          box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  
+          li {
+            position: relative;
+  
+            a {
+              padding: 8px 16px;
+            }
+  
+            .submenu {
+              top: 0;
+              left: 100%; /* Menu con cấp 3 xuất hiện bên phải */
+            }
+          }
+        }
+      }
+    }
+  }
+  

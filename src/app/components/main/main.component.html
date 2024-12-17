@@ -1,22 +1,19 @@
 <div>
-  
+  <section id="hero-animated" class="hero-animated d-flex align-items-center">
+    <ul>
+      <li *ngFor="let user of users">
+        {{ user.id }} - {{ user.name }} - {{ user.age }}
+      </li>
+    </ul>
 
-    <section id="hero-animated" class="hero-animated d-flex align-items-center">
-        <ul >
-            <li *ngFor="let user of users">
-                {{user.id}} - {{user.name}} - {{user.age}}
-            </li>
-          </ul>
+    <!-- <button type="button" class="btn btn-primary">Add</button>
 
-          <button type="button" class="btn btn-primary">Add</button>
+          <button type="button" class="btn btn-danger">Delete</button> -->
+  </section>
 
-          <button type="button" class="btn btn-danger">Delete</button>
+  <main id="main">
+    <app-contact> </app-contact>
+  </main>
 
-    </section>
-    
-    <main id="main">
-    
-        <app-contact></app-contact>
-    
-    </main><!-- End #main -->
-  </div>
+  <!-- End #main -->
+</div>

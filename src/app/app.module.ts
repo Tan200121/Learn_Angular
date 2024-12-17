@@ -9,7 +9,9 @@ import { FooterComponent } from './components/footer/footer.component';
 import { FooterContentComponent } from './components/footer/components/footer-content/footer-content.component';
 import { FooterLegalComponent } from './components/footer/components/footer-legal/footer-legal.component';
 import { ContactComponent } from './components/main/components/contact/contact.component';
-import { HttpClientModule } from '@angular/common/http';  // replaces previous Http service
+import { HttpClientModule } from '@angular/common/http';
+import { MenuItemComponent } from './menu-item/menu-item.component';
+import { NavbarComponent } from './navbar/navbar.component';  // replaces previous Http service
 
 @NgModule({
   declarations: [
@@ -19,8 +21,11 @@ import { HttpClientModule } from '@angular/common/http';  // replaces previous H
     FooterComponent,
     FooterContentComponent,
     FooterLegalComponent,
-    ContactComponent
+    ContactComponent,
+    MenuItemComponent,
+    NavbarComponent
   ],
+  
   imports: [
     BrowserModule,
     AppRoutingModule,
