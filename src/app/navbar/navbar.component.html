@@ -1,0 +1,64 @@
+<div class="container-fluid d-flex align-items-center justify-content-between">
+  <a
+    href="index.html"
+    class="logo d-flex align-items-center scrollto me-auto me-lg-0"
+  >
+    <h1>HeroBiz<span>.</span></h1>
+  </a>
+
+  <nav id="navbar" class="navbar">
+    <ul>
+      <!-- Render menu -->
+      <li *ngFor="let item of menuItems" class="dropdown">
+        <a
+          [href]="item.link || '#'"
+          (click)="item.children ? $event.preventDefault() : ''"
+        >
+          <span>{{ item.label }}</span>
+          <!-- Hiển thị mũi tên nếu có submenu -->
+          <i
+            *ngIf="item.children"
+            class="bi bi-chevron-down dropdown-indicator"
+          ></i>
+        </a>
+
+        <!-- Submenu cấp 2 -->
+        <ul *ngIf="item.children">
+          <li *ngFor="let child of item.children" class="dropdown">
+            <a
+              [href]="child.link || '#'"
+              (click)="child.children ? $event.preventDefault() : ''"
+            >
+              <span>{{ child.label }}</span>
+              <!-- Hiển thị mũi tên nếu có submenu cấp 3 -->
+              <i
+                *ngIf="child.children"
+                class="bi bi-chevron-down dropdown-indicator"
+              ></i>
+            </a>
+
+            <!-- Submenu cấp 3 -->
+            <ul *ngIf="child.children">
+              <li *ngFor="let subChild of child.children" class="dropdown">
+                <a [href]="subChild.link || '#'">{{ subChild.label }}
+                </a>
+
+                <!-- Submenu cấp 4 (Deep Cross Down) -->
+                <ul *ngIf="subChild.children">
+                  <li *ngFor="let subSubChild of subChild.children">
+                    <a
+                      [href]="subSubChild.link || '#'"
+                      class="deep-cross-down"
+                      >{{ subSubChild.label }}</a
+                    >
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+    <i class="bi bi-list mobile-nav-toggle d-none"></i>
+  </nav>
+</div>

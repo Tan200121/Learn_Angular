@@ -1,0 +1,53 @@
+.navbar ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar > ul > li {
+  position: relative;
+}
+
+.navbar a {
+  text-decoration: none;
+  padding: 10px 15px;
+  display: block;
+  color: #333;
+}
+
+.navbar .dropdown ul {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #fff;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.navbar .dropdown:hover > ul {
+  display: block;
+}
+
+.navbar .dropdown ul li {
+  position: relative;
+}
+
+.navbar .dropdown ul li a {
+  padding: 10px 20px;
+  white-space: nowrap;
+}
+
+.navbar .dropdown ul ul {
+  top: 0;
+  left: 100%;
+}
+
+.navbar .deep-cross-down {
+  font-size: 0.9em;
+  padding-left: 30px;
+  color: #666;
+}
+
+.navbar .dropdown-indicator {
+  margin-left: 5px;
+}
